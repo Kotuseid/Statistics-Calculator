@@ -1,0 +1,106 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cambria Math";
+  color: white;
+  background: linear-gradient(
+    0deg,
+    rgba(43, 23, 227, 1) 0%,
+    rgba(80, 83, 237, 1) 50%,
+    rgba(57, 152, 233, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+textarea {
+  font-family: "Cambria Math";
+  color: white;
+  margin: 30px;
+  min-width: 20%;
+  max-width: 40%;
+  min-height: 20vh;
+  max-height: calc(100vh - 90px);
+  font-size: 35px;
+  border-radius: 4px;
+  outline: none;
+  background: #2996f3;
+  border: 5px #0A4D86 double;
+  padding: 5px;
+  box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.3);
+  transition: all 1s ease;
+}
+textarea::placeholder {
+  color: #0d69b8;
+  padding: 5px;
+}
+
+textarea:hover {
+  border: 5px #0A4D86 solid;
+  box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.5);
+}
+
+.th {
+  background: #0d69b8;
+}
+td {
+  background: #2996f3;
+}
+
+th,
+td {
+  border: 5px #0A4D86 double;
+  font-size: 40px;
+  padding: 5px;
+  width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.3);
+  transition: all 1s ease;
+}
+
+th:hover,
+td:hover {
+  border: 5px #0A4D86 solid;
+  box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.5);
+}
+
+table {
+  margin: 25px;
+}
+
+.displayCalc {
+  margin: 30px;
+  background: #2996f3;
+  min-width: 240px;
+  font-size: 40px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 5px #0A4D86 double;
+  box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.3);
+  transition: all 1s ease;
+}
+
+.displayCalc:hover {
+  border: 5px #0A4D86 solid;
+  box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.5);
+}
+
+#display {
+  background: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+footer {
+  position: fixed;
+  width: 100vw;
+  height: 45px;
+  background: #FFFFFF44;
+  bottom: 0;
+  text-align: center;
+  font-family: "Segoe UI";
+}

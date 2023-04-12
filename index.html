@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="k.ico">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Statistics Calculator</title>
+  <meta charset="utf-8" />
+  <script src="sketch.js" defer></script>
+</head>
+
+<body>
+  <div id="display">
+    <textarea placeholder="Type out data with space between each score . . ." id="data"></textarea>
+    <div id="displayTable">
+      <table cellspacing="5px">
+        <thead>
+          <th class="th">𝑥</th>
+          <th class="th">𝑓</th>
+          <th class="th">𝑓𝑥</th>
+          <th class="th">𝑐𝑓</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div id="displayCalc">
+      <div id="mode" class="displayCalc">Mode/s:</div>
+      <div id="mean" class="displayCalc">Mean:</div>
+      <div id="median" class="displayCalc">Median:</div>
+      <div id="range" class="displayCalc">Range:</div>
+      <div id="sd" class="displayCalc">σ:</div>
+      <div id="iqr" class="displayCalc">IQR:</div>
+    </div>
+  </div>
+  <footer>&copy;Kotuseid 2022<br>Syed Mihsan Ferdaws Quddusi</footer>
+</body>
+
+</html>
