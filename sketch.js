@@ -116,13 +116,18 @@ INPUT.addEventListener("input", (e) => {
     let row = document.createElement("tr");
     let rowX = document.createElement("td");
     let rowF = document.createElement("td");
-    let rowCF = document.createElement("td");
     let rowFX = document.createElement("td");
+    let rowCF = document.createElement("td");
 
     rowX.innerHTML = X[i];
     rowF.innerHTML = F[i];
-    rowCF.innerHTML = CF[i];
     rowFX.innerHTML = FX[i];
+    rowCF.innerHTML = CF[i];
+
+    rowX.setAttribute("onclick", "navigator.clipboard.writeText(this.innerHTML)");
+    rowF.setAttribute("onclick", "navigator.clipboard.writeText(this.innerHTML)");
+    rowFX.setAttribute("onclick", "navigator.clipboard.writeText(this.innerHTML)");
+    rowCF.setAttribute("onclick", "navigator.clipboard.writeText(this.innerHTML)");
 
     row.appendChild(rowX);
     row.appendChild(rowF);
@@ -139,6 +144,10 @@ INPUT.addEventListener("input", (e) => {
       rx.innerHTML = "Σ";
       rf.innerHTML = SUMF;
       rfx.innerHTML = SUMFX;
+
+      rx.setAttribute("onclick", "navigator.clipboard.writeText(this.innerHTML)");
+      rf.setAttribute("onclick", "navigator.clipboard.writeText(this.innerHTML)");
+      rfx.setAttribute("onclick", "navigator.clipboard.writeText(this.innerHTML)");
 
       rx.className = "th";
 

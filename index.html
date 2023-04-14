@@ -15,24 +15,24 @@
     <div id="displayTable">
       <table cellspacing="5px">
         <thead>
-          <th class="th">𝑥</th>
-          <th class="th">𝑓</th>
-          <th class="th">𝑓𝑥</th>
-          <th class="th">𝑐𝑓</th>
+          <th class="th" onclick="navigator.clipboard.writeText(this.innerHTML)">𝑥</th>
+          <th class="th" onclick="navigator.clipboard.writeText(this.innerHTML)">𝑓</th>
+          <th class="th" onclick="navigator.clipboard.writeText(this.innerHTML)">𝑓𝑥</th>
+          <th class="th" onclick="navigator.clipboard.writeText(this.innerHTML)">𝑐𝑓</th>
         </thead>
         <tbody id="tbody"></tbody>
       </table>
     </div>
     <div id="displayCalc">
-      <div id="mode" class="displayCalc">Mode/s:</div>
-      <div id="mean" class="displayCalc">Mean:</div>
-      <div id="median" class="displayCalc">Median:</div>
-      <div id="range" class="displayCalc">Range:</div>
-      <div id="sd" class="displayCalc">σ:</div>
-      <div id="iqr" class="displayCalc">IQR:</div>
+      <div id="mode" class="displayCalc" onclick="navigator.clipboard.writeText(this.innerHTML)">Mode/s:</div>
+      <div id="mean" class="displayCalc" onclick="navigator.clipboard.writeText(this.innerHTML)">Mean:</div>
+      <div id="median" class="displayCalc" onclick="navigator.clipboard.writeText(this.innerHTML)">Median:</div>
+      <div id="range" class="displayCalc" onclick="navigator.clipboard.writeText(this.innerHTML)">Range:</div>
+      <div id="sd" class="displayCalc" onclick="navigator.clipboard.writeText(this.innerHTML)">σ:</div>
+      <div id="iqr" class="displayCalc" onclick="navigator.clipboard.writeText(this.innerHTML)">IQR:</div>
     </div>
   </div>
-  <footer>&copy;Kotuseid 2022</footer>
+  <footer>&copy;Kotuseid 2022 - 2023</footer>
 </body>
 
 </html>
