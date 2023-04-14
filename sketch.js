@@ -25,6 +25,9 @@ INPUT.addEventListener("input", (e) => {
   for (let i = 0; i < data.length; i++) {
     data[i] = parseInt(data[i]);
   }
+  data = data.filter(function (value) {
+    return !Number.isNaN(value);
+  });
   console.log("UNORDERED: ", data);
 
   //ORDERED DATA
@@ -32,7 +35,7 @@ INPUT.addEventListener("input", (e) => {
   for (let i = 0; i < DATA.length; i++) {
     DATA[i] = parseInt(DATA[i]);
   }
-  console.log("ORDERED", DATA);
+  console.log("ORDERED: ", DATA);
 
   //X VALUES
   X = [...new Set(DATA)];
@@ -83,6 +86,7 @@ INPUT.addEventListener("input", (e) => {
 
   //MEAN
   MEAN = SUMFX / SUMF;
+  MEAN = MEAN.toFixed(4);
   console.log("MEAN: ", MEAN);
 
   //RANGE
@@ -104,6 +108,7 @@ INPUT.addEventListener("input", (e) => {
   }
   SD = SD / SUMF;
   SD = Math.sqrt(SD);
+  SD = SD.toFixed(4);
   console.log("SD: ", SD);
 
   //IQR
@@ -161,10 +166,10 @@ INPUT.addEventListener("input", (e) => {
 
   //DISPLAY CALCULATIONS
   mode.innerHTML = "Mode/s: " + MODE.toString();
-  mean.innerHTML = "Mean: " + MEAN;
+  mean.innerHTML = "Mean: " + MEAN + " (4.d.p)";
   median.innerHTML = "Median: " + MEDIAN;
   range.innerHTML = "Range: " + RANGE;
-  sd.innerHTML = "σ: " + SD;
+  sd.innerHTML = "σ: " + SD + " (4.d.p)";
   iqr.innerHTML = "IQR: " + IQR;
 });
 
