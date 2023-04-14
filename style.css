@@ -1,15 +1,19 @@
+/*
+#0A4D86
+#0d69b8
+#2996f3
+*/
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: "Cambria Math";
   color: white;
-  background: linear-gradient(
-    0deg,
-    rgba(43, 23, 227, 1) 0%,
-    rgba(80, 83, 237, 1) 50%,
-    rgba(57, 152, 233, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(43, 23, 227, 1) 0%,
+      rgba(80, 83, 237, 1) 50%,
+      rgba(57, 152, 233, 1) 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
@@ -18,11 +22,6 @@ body {
 textarea {
   font-family: "Cambria Math";
   color: white;
-  margin: 30px;
-  min-width: 20%;
-  max-width: 40%;
-  min-height: 20vh;
-  max-height: calc(100vh - 90px);
   font-size: 35px;
   border-radius: 4px;
   outline: none;
@@ -32,6 +31,7 @@ textarea {
   box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.3);
   transition: all 1s ease;
 }
+
 textarea::placeholder {
   color: #0d69b8;
   padding: 5px;
@@ -42,9 +42,22 @@ textarea:hover {
   box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.5);
 }
 
+#displayTable {
+  margin: 25px;
+  max-height: 60vh;
+  height: fit-content;
+  /* height: clamp(60px, 80px, 60vh); */
+  overflow-y: auto;
+  border-radius: 10px;
+  border-color: #170057;
+  border-width: 2px;
+  border-style: solid dotted;
+}
+
 .th {
   background: #0d69b8;
 }
+
 td {
   background: #2996f3;
 }
@@ -54,7 +67,6 @@ td {
   border: 5px #0A4D86 double;
   font-size: 40px;
   padding: 5px;
-  width: 80px;
   text-align: center;
   border-radius: 4px;
   box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.3);
@@ -67,14 +79,10 @@ td:hover {
   box-shadow: -5px 10px 5px rgb(38, 38, 38, 0.5);
 }
 
-table {
-  margin: 25px;
-}
-
 .displayCalc {
   margin: 30px;
   background: #2996f3;
-  min-width: 240px;
+  min-width: 300px;
   font-size: 40px;
   padding: 5px;
   border-radius: 4px;
@@ -90,9 +98,6 @@ table {
 
 #display {
   background: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 footer {
@@ -103,4 +108,88 @@ footer {
   bottom: 0;
   text-align: center;
   font-family: "Segoe UI";
+}
+
+th,
+td,
+.displayCalc {
+  cursor: pointer;
+}
+
+th:active,
+td:active,
+.displayCalc:active {
+  border-color: #170057;
+}
+
+@media screen and (max-width: 600px) {
+  #display {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  textarea {
+    margin: 30px;
+    min-width: 70%;
+    max-width: 90%;
+    min-height: 20vh;
+    max-height: 30vh;
+  }
+
+  td,
+  th {
+    width: calc(100vw / 6);
+    font-size: 30px;
+  }
+
+  .displayCalc {
+    max-height: 150px;
+    min-height: 50px;
+    /* max-width:100px; */
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  textarea {
+    margin: 30px;
+    min-width: 20%;
+    max-width: 40%;
+    width: clamp(20%, 20%, 40%);
+    min-height: 20vh;
+    max-height: calc(100vh - 90px);
+  }
+
+  td,
+  th {
+    width: 80px;
+    font-size: 40px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1d7bce;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0d69b8;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0A4D86;
 }
