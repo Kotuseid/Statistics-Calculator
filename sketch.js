@@ -19,7 +19,11 @@ let iqr = document.getElementById("iqr");
 
 loadData();
 
-INPUT.addEventListener("input", (e) => {
+run();
+
+INPUT.addEventListener("input", run());
+
+function run() {
   console.clear();
 
   //UNORDERED DATA
@@ -173,7 +177,7 @@ INPUT.addEventListener("input", (e) => {
   range.innerHTML = "Range: " + RANGE;
   sd.innerHTML = "σ: " + SD + " (4.d.p)";
   iqr.innerHTML = "IQR: " + IQR;
-});
+}
 
 //idk how this works but it works so im not complaining
 function calcMode(arr) {
