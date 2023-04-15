@@ -127,12 +127,13 @@ td:active,
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    align-items: center;
   }
 
   textarea {
     margin: 30px;
     min-width: 70%;
-    max-width: 90%;
+    max-width: 80%;
     min-height: 20vh;
     max-height: 30vh;
   }
