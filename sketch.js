@@ -17,6 +17,8 @@ let iqr = document.getElementById("iqr");
 
 //All the other functions used were created by me
 
+loadData();
+
 INPUT.addEventListener("input", (e) => {
   console.clear();
 
@@ -228,4 +230,13 @@ function calcMedian(d) {
     m = d[pos - 1];
   }
   return m;
+}
+
+
+function saveData() {
+  localStorage.setItem("statisticsCalculatorInput", INPUT.value);
+}
+
+function loadData() {
+  INPUT.value = localStorage.getItem("statisticsCalculatorInput");
 }
