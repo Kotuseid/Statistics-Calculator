@@ -10,18 +10,12 @@ let iqr = document.getElementById("iqr");
 /*
      ©Kotuseid 2022
 */
-//Credit to people that answer questions on stackoverflow as the following functions were derived from their answers:
-//ORDERED DATA
-//F VALUES
-//MODE
-
-//All the other functions used were created by me
 
 loadData();
 
 run();
 
-INPUT.addEventListener("input", run());
+INPUT.addEventListener("input", run);
 
 function run() {
   console.clear();
